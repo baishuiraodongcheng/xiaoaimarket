@@ -1,4 +1,29 @@
 
+
+
+
+
+
+.text-center{
+	text-indent: 0!important;
+	text-align: center!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header{
 	width: 100%;
 	background: #f0f0f0;
@@ -288,6 +313,7 @@
 	line-height: 40px;
 	font-size: 16px;
 	color: #fff;
+	display: block;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	text-indent: 50px;
@@ -298,7 +324,7 @@
 }
 .banner-link{
 	float: left;
-	width: 450px;
+	width: 200px;
 	overflow: hidden;
 }
 .banner-link a {
