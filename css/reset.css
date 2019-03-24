@@ -44,7 +44,6 @@ input[type=password] {border:1px solid #bbb; padding:7px 4px 4px 4px;}
 input[type=text].c {text-indent:0;}
 label {cursor:pointer; vertical-align:middle;}
 a {text-decoration:none; color:#444;}
-a:hover, a:active, a:focus{text-decoration:none; color:#444;}
 button {border:0; vertical-align:middle; cursor:pointer; overflow:visible; background:transparent;}
 button::-moz-focus-inner {border:0; padding:0;}
 
