@@ -65,54 +65,40 @@
 			<div class="volume-wrapper">
 				<div class="volume-wrapper-content">
 					<div class="volume-content-top">
-						<div class="user-info">
-							<img class="head" src="images/head.png" /><span style="margin-left: 10px;">张三</span>
-						</div>
-						<div class="custom-tabs">
-							<nav class="navbar navbar-expand-sm bg-light">
-								<ul class="navbar-nav">
-									<li class="nav-item">
-										<a class="nav-link" href="#">全部订单(1)</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link active" href="#">优惠券(3)</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">收货地址</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">分销中心</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">个人设置</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
+						<div class="user-info"><img src="images/head.png" />张三</div>
+						<ul class="navbar-nav">
+							<li class="nav-item active">全部订单(1)</li>
+							<li class="nav-item">优惠券(3)</li>
+							<li class="nav-item">收货地址</li>
+							<li class="nav-item">分销中心</li>
+							<li class="nav-item">个人设置</li>
+						</ul>
 					</div>
-					<div id="tab-content-two" class="volume-content-bottom container tab-pane active">
-						<ul class="nav nav-tabs" role="tablist">
-							<li class="nav-item">
-								<a class="nav-link active" data-toggle="pill" href="#volume-one">全部优惠卷</a>
+					<div class="volume-content-bottom">
+						<ul class="nav-content">
+							<li class="navs-item active">全部优惠卷</li>
+							<li class="navs-item">待使用 <span>3</span></li>
+							<li class="navs-item">已使用 <span>1</span></li>
+							<div class="clear"></div>
+						</ul>
+						<ul class="tab-content">
+							<li>
+								<div class="coupon-img over">
+									<p class="coupon-money">￥200</p>
+									<p class="coupon-dateline">使用期限</p>
+									<p class="coupon-date">2018.8.30-2018.9.7</p>
+								</div>
+								<p class="coupon-use">已使用</p>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="pill" href="#volume-two">待使用</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="pill" href="#volume-three">已使用</a>
+							<li>
+								<div class="coupon-img come">
+									<p class="coupon-money">￥200</p>
+									<p class="coupon-money">使用期限</p>
+									<p class="coupon-money">2018.8.30-2018.9.7</p>
+								</div>
+								<p class="coupon-use">待使用</p>
 							</li>
 						</ul>
-						<div class="modal-body tab-content">
-							<div id="volume-one" class="container tab-pane active">
-								<span>one</span>
-							</div>
-							<div id="volume-two" class="container tab-pane fade">
-								<span>two</span>
-							</div>
-							<div id="volume-three" class="container tab-pane fade">
-								<span>three</span>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
