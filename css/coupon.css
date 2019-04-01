@@ -15,7 +15,6 @@ body {
 	width: 100%;
 	min-width: 1200px;
 	position: relative;
-	height: 500px;
 	border-top: solid;
 	border-width: 1px;
 	border-top-color: #a15fbc;
@@ -24,12 +23,7 @@ body {
 .volume-wrapper-content {
 	margin: 0 auto;
 	width: 60%;
-	height: 462px;
-	/*border: solid;
-	border-width: 1px;
-	border-color: #a15fbc;*/
 	margin-top: 20px;
-	/*overflow: hidden;*/
 }
 
 .volume-content-top {
@@ -72,6 +66,7 @@ body {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	border-bottom: 3px solid #fff;
+	cursor: pointer;
 }
 .nav-item.active{
 	border-bottom: 3px solid var(--theme);
@@ -98,12 +93,13 @@ body {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	cursor: pointer;
+	position: relative;
+	bottom: -2px;
 }
 .navs-item.active{
 	border: 2px solid #ddd;
 	border-bottom: none;
-	position: relative;
-	bottom: -2px;
 	background: #f8f9fb;
 }
 .navs-item:nth-child(2) span{
@@ -111,26 +107,83 @@ body {
 }
 
 .tab-content{
-	
+	overflow: hidden;
+	padding:0 40px;
 }
 .tab-content li{
-	
+	width: 212px;
+	margin-right: 52px;
+	overflow: hidden;
+	float: left;
+	margin-top: 20px;
 }
 .coupon-img{
-
+	position: relative;
+	width: 212px;
+	height: 89px;
+	overflow: hidden;
+	padding-top:10px;
 }
 .over{
-
+	background: url(../images/bga.png) no-repeat left top;
+	background-size: 212px 89px;
+}
+.come{
+	background: url(../images/bgb.png) no-repeat left top;
+	background-size: 212px 89px;
 }
 .coupon-money{
-
+	height: 35px;
+	line-height: 35px;
+	font-size: 28px;
+	color: #ee268a;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.over .coupon-money{
+	color: #9a9a9a;
 }
 .coupon-dateline{
-	
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #3e3e3e;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 .coupon-date{
-	
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #3e3e3e;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 .coupon-use{
-	
+	width: 80px;
+	margin:15px auto;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	border-radius: 8px;
+	cursor: pointer;
 }
+.coupon-useing{
+	color: #fff;
+	background: #b730b0;
+}
+.coupon-used{
+	background: #d3d3d3;
+	color: #9a9a9a;
+}
+
