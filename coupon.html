@@ -67,8 +67,8 @@
 					<div class="volume-content-top">
 						<div class="user-info"><img src="images/head.png" />张三</div>
 						<ul class="navbar-nav">
-							<li class="nav-item active">全部订单(1)</li>
-							<li class="nav-item">优惠券(3)</li>
+							<li class="nav-item">全部订单(1)</li>
+							<li class="nav-item active">优惠券(3)</li>
 							<li class="nav-item">收货地址</li>
 							<li class="nav-item">分销中心</li>
 							<li class="nav-item">个人设置</li>
@@ -88,15 +88,47 @@
 									<p class="coupon-dateline">使用期限</p>
 									<p class="coupon-date">2018.8.30-2018.9.7</p>
 								</div>
-								<p class="coupon-use">已使用</p>
+								<p class="coupon-used coupon-use">已使用</p>
 							</li>
 							<li>
 								<div class="coupon-img come">
 									<p class="coupon-money">￥200</p>
-									<p class="coupon-money">使用期限</p>
-									<p class="coupon-money">2018.8.30-2018.9.7</p>
+									<p class="coupon-dateline">使用期限</p>
+									<p class="coupon-date">2018.8.30-2018.9.7</p>
 								</div>
-								<p class="coupon-use">待使用</p>
+								<p class="coupon-useing coupon-use">待使用</p>
+							</li>
+							<li>
+								<div class="coupon-img over">
+									<p class="coupon-money">￥200</p>
+									<p class="coupon-dateline">使用期限</p>
+									<p class="coupon-date">2018.8.30-2018.9.7</p>
+								</div>
+								<p class="coupon-used coupon-use">已使用</p>
+							</li>
+							<li>
+								<div class="coupon-img come">
+									<p class="coupon-money">￥200</p>
+									<p class="coupon-dateline">使用期限</p>
+									<p class="coupon-date">2018.8.30-2018.9.7</p>
+								</div>
+								<p class="coupon-useing coupon-use">待使用</p>
+							</li>
+							<li>
+								<div class="coupon-img over">
+									<p class="coupon-money">￥200</p>
+									<p class="coupon-dateline">使用期限</p>
+									<p class="coupon-date">2018.8.30-2018.9.7</p>
+								</div>
+								<p class="coupon-used coupon-use">已使用</p>
+							</li>
+							<li>
+								<div class="coupon-img come">
+									<p class="coupon-money">￥200</p>
+									<p class="coupon-dateline">使用期限</p>
+									<p class="coupon-date">2018.8.30-2018.9.7</p>
+								</div>
+								<p class="coupon-useing coupon-use">待使用</p>
 							</li>
 						</ul>
 					</div>
@@ -104,6 +136,14 @@
 			</div>
 		</div>
 
-	</body>
+<script type="text/javascript">
+	$(function(){
 
+		// 一级菜单切换
+		$(".navs-item").click(function(){
+			$(this).addClass("active").siblings(".navs-item").removeClass("active");
+		})
+	})
+</script>
+	</body>
 </html>
