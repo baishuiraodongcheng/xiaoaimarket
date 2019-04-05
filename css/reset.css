@@ -38,7 +38,6 @@ input[type=text] {border:1px solid #bbb; padding:5px 4px 6px 4px;}
 */
 
 .chrome input[type=text], .firefox input[type=text], .safari input[type=text], .opera input[type=text]   {padding:5px 4px 6px 4px;}
-input[type=password] {border:1px solid #bbb; padding:7px 4px 4px 4px;}
 .chrome input[type=password], .firefox input[type=password], .safari input[type=password], .opera input[type=password] {padding:5px 4px 6px 4px;}
 
 input[type=text].c {text-indent:0;}

@@ -1,125 +1,95 @@
-	window.onload = function() {
-				var input = document.getElementById("upgteimg");
-				var showui = document.getElementById("showui");
-				var result;
-				var dataArr = []; // 储存所选图片的结果(文件名和base64数据)
-				var fd; //FormData方式发送请求
-				var showinput = document.getElementById("showinput");
-				var oSubmit = document.getElementById("submit");
-				var dateli, dateinput;
-				function randomString(len) {　　
-					len = len || 32;　　
-					var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'; /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/ 　　
-					var maxPos = $chars.length;　　
-					var pwd = '';　　
-					for(i = 0; i < len; i++) {　　　　
-						pwd += $chars.charAt(Math.floor(Math.random() * maxPos));　　
-					}　　
-					return pwd;
-				}
-				console.log()
-				if(typeof FileReader === 'undefined') {
-					alert("抱歉，你的浏览器不支持 FileReader");
-					input.setAttribute('disabled', 'disabled');
-				} else {
-					input.addEventListener('change', readFile, false);
-				}
+ $(function () {
+        //图片上传
+            //选择要上传的所有文件
+            fileList = [];
+        //当前选择上传的文件
+        var curFile;
+        // 选择按钮change事件，实例化fileReader,调它的readAsDataURL并把原生File对象传给它，
+        // 监听它的onload事件，load完读取的结果就在它的result属性里了。它是一个base64格式的，可直接赋值给一个img的src.
+        $(".add-img input").on('change', function (e) {
+            //上传过图片后再次上传时限值数量
+            var numold =$(this).parent().prev('.file-list').find("li").length;
+            console.log(numold)
+            if(numold >= 9){
+                alert('最多上传9张图片');
+                return;
+            }
+            //限制单次批量上传的数量
+            var num = e.target.files.length;
+            var numall = numold + num;
+            if(num >9 ){
+               alert('最多上传9张图片');
+               return;
+            }else if(numall > 9){
+                alert('最多上传9张图片');
+                return;
+            }
+            //原生的文件对象，相当于$(".add-img input").get(0).files;//files[0]为第一张图片的信息;
+            curFile = this.files;
+            //将FileList对象变成数组
+            fileList = fileList.concat(Array.from(curFile));
+            //console.log(fileList);
+            for (var i = 0, len = curFile.length; i < len; i++) {
+                reviewFile(curFile[i],$(this));
+            }
+            $(this).parent().prev('.file-list').fadeIn(2500);
+        })
 
-				function readFile() {
-					fd = new FormData();
-					var iLen = this.files.length;
-					var index = 0;
-					// if(iLen>8){
-					// 	return false;
-					// }
-					var currentReViewImgIndex = 0;
-					for(var i = 0; i < 9; i++) {
-						if(!input['value'].match(/.jpg|.gif|.png|.jpeg|.bmp/i)) {　　 //判断上传文件格式
-							return alert("上传的图片格式不正确，请重新选择");
-						}
-						var reader = new FileReader();
-						reader.index = i;
-						fd.append(i, this.files[i]);
-						reader.readAsDataURL(this.files[i]); //转成base64
-						reader.fileName = this.files[i].name;
-						reader.files = this.files[i];
-						reader.onload = function(e) {
-							var imgMsg = {
-								name: randomString(5), //获取文件名
-								base64: this.result, //reader.readAsDataURL方法执行完后，base64数据储存在reader.result里
-							}
-							dataArr.push(imgMsg);
-							for(var j = 0; j < dataArr.length; j++) {
-								currentReViewImgIndex = j
-							}
-							result = '<div class="showdiv"><img class="left" src="images/Arrow_left.svg" /><img class="center" src="images/delete.svg" /><img class="right" src="images/Arrow_right.svg" /></div><img id="img' +currentReViewImgIndex+randomString(1)+randomString(2) +randomString(5) + '" class="showimg" src="' + this.result + '" />';
-							var li = document.createElement('li');
-							li.innerHTML = result;
-							showui.appendChild(li);
-							index++;
-						}
-					}
-				}
 
-				function onclickimg() {
-					var dataArrlist = dataArr.length;
-					var lilength = document.querySelectorAll('ul#showui li');
-					for(var i = 0; i < lilength.length; i++) {
-						lilength[i].getElementsByTagName('img')[0].onclick = function(num) {
-							return function() {
-								if(num == 0) {} else {
-									var list = 0;
-									for(var j = 0; j < dataArr.length; j++) {
-										list = j
-									}
-									var up = num - 1;
-									dataArr.splice(up, 0, dataArr[num]);
-									dataArr.splice(num + 1, 1)
-									var lists = $("ul#showui li").length;
-									for(var j = 0; j < lists; j++) {
-										var usid = $("ul#showui li")[j].getElementsByTagName('img')[3];
-										$("#" +usid.id+ "").attr("src", dataArr[j].base64)
-									}
-								}
-							}
-						}(i)
-						//删除图标
-						lilength[i].getElementsByTagName('img')[1].onclick = function(num) {
-							return function() {
-								if(dataArr.length == 1) {
-									dataArr = [];
-									$("ul#showui").html("")
-								} else {
-									$("ul#showui li:eq(" + num + ")").remove()
-									dataArr.splice(num, 1)
-								}
+        function reviewFile(file,_this) {
+            //实例化fileReader,
+            var fd = new FileReader();
+            //获取当前选择文件的类型
+            var fileType = file.type;
+            //调它的readAsDataURL并把原生File对象传给它，
+            fd.readAsDataURL(file);//base64
+            //监听它的onload事件，load完读取的结果就在它的result属性里了
+            fd.onload = function () {
+                if (/^image\/[jpeg|png|jpg|gif]/.test(fileType)) {
+                    _this.parent().prev('.file-list').append('<li class="file-item"><img class="img-pic" src="' + this.result + '" alt=""><span class="file-del">删除</span></li>').children(':last').hide().fadeIn(1000);
+                } else {
+                    _this.parent().prev('.file-list').append('<li class="file-item"><span class="file-name">' + file.name + '</span><span class="file-del">删除</span></li>')
+                }
 
-							}
-						}(i)
-						//右箭头图标
-						lilength[i].getElementsByTagName('img')[2].onclick = function(num) {
-							return function() {
-								var list = 0;
-								for(var j = 0; j < dataArr.length; j++) {
-									list = j
-								}
-								var datalist = list + 1;
-								dataArr.splice(datalist, 0, dataArr[num]);
-								dataArr.splice(num, 1)
-								var lists = $("ul#showui li").length;
-								for(var j = 0; j < lists; j++) {
-									var usid = $("ul#showui li")[j].getElementsByTagName('img')[3];
-									$("#" + usid.id + "").attr("src", dataArr[j].base64)
-								}
+            }
+        }
 
-							}
-						}(i)
-
-					}
-				}
-				showui.addEventListener("click", function() {
-					onclickimg();
-				}, true)
-
-			}
-		
+        //点击删除按钮事件：
+        $(".file-list").on('click', '.file-del', function () {
+            let $parent = $(this).parent();
+            let index = $parent.index();
+            fileList.splice(index, 1);
+            $parent.fadeOut(850, function () {
+                $parent.remove()
+            });
+        });
+        //点击上传按钮事件：
+        // $button.on('click', function () {
+        //     var name = $('#name').val();
+        //     if (name == '') {
+        //         alert('请输入商品名称');
+        //         return;
+        //     }
+        //      if(fileList.length > 6){
+        //             alert('最多允许上传6张图片');
+        //             return;
+        //     } else {
+        //         var formData = new FormData();
+        //         for (var i = 0, len = fileList.length; i < len; i++) {
+        //             formData.append('upfile[]', fileList[i]);
+        //         }
+        //         formData.append('name', name);
+        //         $.ajax({
+        //             url: '',
+        //             type: 'post',
+        //             data: formData,
+        //             dataType: 'json',
+        //             processData: false,
+        //             contentType: false,
+        //             success: function (data) {
+                       
+        //             }
+        //         })
+        //     }
+        // })
+    })
