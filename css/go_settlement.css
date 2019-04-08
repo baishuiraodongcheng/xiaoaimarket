@@ -165,32 +165,38 @@ body{
     margin-left: 78px;
 }
 .head-money{
-	width: 250px;
-	height: 44px;
-	line-height: 44px;
-	font-size: 12px;
-	color: #7f7f7f;
-	text-align: right;
-	float: right;
-	margin-right: 70px;
+	width: 81px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 12px;
+    color: #7f7f7f;
+    text-align: center;
+    float: left;
+    margin-left: 60px;
 }
 .head-ji{
-	width: 100px;
-	height: 44px;
-	line-height: 44px;
-	font-size: 12px;
-	color: #7f7f7f;
-	float: left;
-	margin-left: 66px;
+	width: 78px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 12px;
+    color: #7f7f7f;
+    float: left;
+    margin-left: 19px;
+    text-align: center;
+}
+.table-order{
+	border: 1px solid #f2f2f2;
 }
 .product-list{
-	border: 1px solid #f2f2f2;
-	border-bottom: none;
 	overflow: hidden;
 }
 .product-list>li{
 	overflow: hidden;
 	border-bottom: 1px solid #e6e6e6;
+}
+.product-list li:last-child{
+	overflow: hidden;
+	border-bottom: none;
 }
 .product-list>li>img{
 	width: 80px;
@@ -240,7 +246,6 @@ body{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	text-align: center;
-	background: #f00;
 }
 .list-four{
 	width: 50px;
@@ -254,7 +259,6 @@ body{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	text-align: center;
-	background: #ff0;
 }
 .list-four-five{
 	width: 80px;
@@ -268,7 +272,6 @@ body{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	text-align: center;
-	background: #f0f;
 }
 .list-five{
 	width: 80px;
@@ -283,9 +286,157 @@ body{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	text-align: center;
-	background: #fe0;
 }
 
 
 
 
+.order-xie{
+	overflow: hidden;
+	margin:0 25px;
+}
+.input-order1{
+	width: 430px;
+	float: left;
+	overflow: hidden;
+}
+.order1-liu{
+	width:80px;
+	float: left;
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+	color: #333;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.input-order1 input{
+	width: 300px;
+    float: right;
+    height: 30px;
+    border: 1px solid #d9d9d9;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0 10px;
+    color: #7f7f7f;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.input-order2{
+	float: left;
+	width: 200px;
+	margin-left: 55px;
+}
+.order2-liu{
+	height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #989898;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.input-order3{
+	width: 80px;
+    height: 60px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #f41212;
+    float: right;
+    margin: 20px 0px 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.zong{
+	height: 50px;
+	border-top:1px solid #ededed;
+	overflow: hidden;
+}
+.pay-btn{
+	width: 120px;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #fff;
+    background: #b730b0;
+    text-align: center;
+    overflow: hidden;
+    float: right;
+}
+.qian-zong{
+	height: 50px;
+	line-height: 50px;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+    float: right;
+    margin-right: 20px;
+}
+.qian-zong span{
+	color: #f41212;
+	font-size: 18px; 
+}
+
+
+
+
+
+
+.xie-title{
+    height: 115px;
+    line-height: 115px;
+    font-size: 24px;
+    color: #2c1e21;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.xie-title span {
+    display: inline-block;
+    width: 8px;
+    height: 22px;
+    background: #b730b0;
+    margin-right: 15px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.pay-box{
+	overflow: hidden;
+	margin-left: 30px;
+}
+.pay-tit{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #333;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.pay-wrap{
+	overflow: hidden;
+	margin-left: 10px;
+}
+.pay-item{
+	width: 80px;
+    height: 20px;
+    border: 1px solid #d9d9d9;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #7f7f7f;
+    float: left;
+    margin-right: 10px;
+    margin-top: 34px;
+    overflow: hidden;
+}
