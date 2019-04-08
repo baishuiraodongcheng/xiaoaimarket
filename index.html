@@ -58,15 +58,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="banner-title">
-				<a href="#" class="banner-tits text-center" title="晓爱商城">情趣市场</a>
-				<a href="#" title="晓爱商城">首页</a>
-				<a href="#" title="晓爱商城">限时特惠</a>
-			</div>
-			<div class="banner-wrapper">
-				<img class="banner-bg" src="images/banner.png"/>
-				<div class="banner-content">
-					<div class="banner-left">
+			<div class="banner-title clear">
+				<div class="banner-tits text-center">
+					<a href="#" title="晓爱商城">情趣市场</a>
+					<div class="banner-left" style="display: block;">
 						<ul class="banner-menu">
 							<li>
 								<p class="menu-tit">男用</p>
@@ -128,6 +123,13 @@
 							</li>
 						</ul>
 					</div>
+				</div>			
+				<a href="#" title="晓爱商城"><div class="banner-div1">首页</div></a>
+				<a href="#" title="晓爱商城"><div class="banner-div2">限时特惠</div></a>
+			</div>
+			<div class="banner-wrapper">
+				<img class="banner-bg" src="images/banner.png"/>
+				<div class="banner-content">
 					<div class="banner-right">
 						<div class="banner-right-one">
 							<img class="head" src="images/head.png"/>
@@ -823,7 +825,17 @@
 		var mySwiperb = new Swiper('.swiper-containerb', {
 			autoplay: 5000,//可选选项，自动滑动
 			pagination : '.swiper-pagination',
+			grabCursor: true,//鼠标光标
 		})
+
+		/*鼠标移入停止轮播，鼠标离开 继续轮播*/
+      	$('.swiper-containerb').mouseenter(function(){
+        	mySwiperb.stopAutoplay();
+      	});
+      	$('.swiper-containerb').mouseleave(function(){
+        	mySwiperb.startAutoplay();
+    	});
+
 
 		// 倒计时
 		var intDiff = parseInt(585552);//倒计时总秒数量

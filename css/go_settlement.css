@@ -20,7 +20,7 @@ body{
 	overflow: hidden;
 }
 .logo-link>img{
-	width: 116px;
+	width: 116.px;
 	height: 23px;
 	float: left;
 	margin-top: 20px;
@@ -146,12 +146,23 @@ body{
 }
 .head-order{
 	width: 100px;
-	height: 44px;
-	line-height: 44px;
-	font-size: 12px;
-	color: #7f7f7f;
-	float: left;
-	margin-left: 50px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 12px;
+    color: #7f7f7f;
+    text-align: center;
+    float: left;
+    margin-left: 50px;
+}
+.head-num{
+	width: 50px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 12px;
+    color: #7f7f7f;
+    text-align: center;
+    float: left;
+    margin-left: 78px;
 }
 .head-money{
 	width: 250px;
@@ -162,6 +173,15 @@ body{
 	text-align: right;
 	float: right;
 	margin-right: 70px;
+}
+.head-ji{
+	width: 100px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 12px;
+	color: #7f7f7f;
+	float: left;
+	margin-left: 66px;
 }
 .product-list{
 	border: 1px solid #f2f2f2;
@@ -209,7 +229,7 @@ body{
 	text-overflow: ellipsis;
 }
 .list-three{
-	width: 150px;
+	width: 100px;
 	height:60px;
 	line-height: 30px;
 	font-size: 12px;
@@ -219,6 +239,8 @@ body{
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	text-align: center;
+	background: #f00;
 }
 .list-four{
 	width: 50px;
@@ -231,6 +253,22 @@ body{
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	text-align: center;
+	background: #ff0;
+}
+.list-four-five{
+	width: 80px;
+	height:60px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #242424;
+	float: left;
+	margin: 20px 0 0 60px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	background: #f0f;
 }
 .list-five{
 	width: 80px;
@@ -244,6 +282,8 @@ body{
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	text-align: center;
+	background: #fe0;
 }
 
 
