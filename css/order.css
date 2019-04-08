@@ -22,7 +22,7 @@ body {
 
 .volume-wrapper-content {
 	margin: 0 auto;
-	width: 60%;
+	width: 1200px;
 	margin-top: 20px;
 }
 
@@ -148,8 +148,8 @@ body {
 }
 .order-name{
 	float: left;
-	width: 210px;	
-	margin-left: 20px;
+	width: 200px;	
+	margin-left: 10px;
 	height: 60px;
 	line-height: 30px;
 	font-size: 12px;
@@ -162,7 +162,7 @@ body {
 }
 .order-moneys{	
 	float: left;
-	width: 100px;
+	width: 120px;
 	height: 80px;
 	line-height: 80px;
 	font-size: 12px;
@@ -175,7 +175,7 @@ body {
 .order-num{
 	float: left;
 	padding-left: 40px;
-	width: 120px;
+	width: 170px;
 	height: 80px;
 	line-height: 55px;
 	font-size: 12px;
@@ -215,7 +215,7 @@ body {
 }
 .order-info{
 	float: left;
-	width: 170px;
+	width: 150px;
 	height: 60px;
 	overflow: hidden;
 	padding-top:20px;

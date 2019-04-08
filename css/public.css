@@ -204,7 +204,7 @@
 	margin:0 auto;
 	width: 100%;
 	min-width: 1200px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	border-bottom:1px solid var(--theme);
 }
 .banner-search{
@@ -294,11 +294,22 @@
 	margin: 0 auto;
     width: 1200px;
     height: 40px;
-    overflow: hidden; 
+    position: relative;
+    font-size: 0;
 }
-.banner-title a {
-	display: inline-block;
-    overflow: hidden;
+.banner-title .banner-div1{
+	width: 36px;	
+	float: left;
+    padding:10px 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 18px;
+    color: #333;
+    position: relative;
+}
+.banner-title .banner-div2{
+	width: 112px;
+	float: left;
     padding:10px 20px;
     height: 20px;
     line-height: 20px;
@@ -317,21 +328,88 @@
 	background: #ededed;
 }*/
 .banner-tits{	
-	width: 256px!important;
-	padding:10px 0!important;
+	width: 256px;
+	overflow: hidden;
+	float: left;
+}
+.banner-tits>a{
+	color: #fff;
+	display: block;
 	height: 40px;
 	line-height: 40px;
 	font-size: 16px;
-	color: #fff!important;
-	display: block;
+	color: #fff;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	text-indent: 50px;
-	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	background: #b730b0;
 }
+
+
+
+
+
+
+.banner-left{
+	width: 256px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	background: #fff;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 40px;
+	z-index: 999;
+	display: none;
+}
+.banner-menu{
+	padding:7px 20px 0;
+	height: 435px;
+	overflow: hidden;
+}
+.banner-menu>li{
+	overflow: hidden;
+	margin-top:12px;
+}
+.menu-tit{
+	width: 45px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #2c1e21;
+	font-weight: bold;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	float: left;
+}
+.menu-sec-list{
+	overflow: hidden;
+	float: left;
+	width: 170px;
+}
+.menu-sec-list li{
+	width: 33.3%;
+	float: left;
+	overflow: hidden;
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	color: #676262;
+}
+.serach-list a:hover{
+	color: #b730b0!important;
+}
+.menu-sec-list li:hover{
+	color: #b730b0!important;
+}
+
+
+
+
+
+
 
 
 

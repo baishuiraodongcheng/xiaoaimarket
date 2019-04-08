@@ -36,55 +36,6 @@ body{
 	height: 442px;
 	overflow: hidden;
 }
-.banner-left{
-	width: 256px;
-	border-bottom-left-radius: 12px;
-	border-bottom-right-radius: 12px;
-	background: #fff;
-	overflow: hidden;
-	float: left;
-}
-.banner-menu{
-	padding:7px 20px 0;
-	height: 435px;
-	overflow: hidden;
-}
-.banner-menu>li{
-	overflow: hidden;
-	margin-top:12px;
-}
-.menu-tit{
-	width: 45px;
-	height: 40px;
-	line-height: 40px;
-	font-size: 14px;
-	color: #2c1e21;
-	font-weight: bold;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	float: left;
-}
-.menu-sec-list{
-	overflow: hidden;
-	float: left;
-	width: 170px;
-}
-.menu-sec-list li{
-	width: 33.3%;
-	float: left;
-	overflow: hidden;
-	height: 40px;
-	line-height: 40px;
-	font-size: 12px;
-	color: #676262;
-}
-.serach-list a:hover{
-	color: #b730b0!important;
-}
-.menu-sec-list li:hover{
-	color: #b730b0!important;
-}
 .banner-right{
 	width: 166px;
 	float: right;
