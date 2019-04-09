@@ -29,4 +29,15 @@ order_detial  ---  订单详情
 
 
 
+cart.html  --- 购物车
+
+go_settlement.html   ---去结算
+
+
+都写完了.....
+
+
+
+
+
 
