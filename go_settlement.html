@@ -15,6 +15,14 @@
 <body>
 	<div class="wrap">
 		<div class="wrap-content">
+			<div class="logo-link">
+				<img src="images/logo.png">
+				<div class="link-two">
+					<img src="images/contact.png">
+					<p class="contact-m"> 联系客服<p>
+				</div>
+				<div class="link-one">继续购物</div>
+			</div>
 			<div class="tianxie">
 				<p class="tianxie-title"><span></span>填写并核对订单信息</p>
 				<div class="tianxie-box">
@@ -22,34 +30,70 @@
 						<p class="tianxie-info">收货人信息</p>
 						<p class="tianxie-add">新增收货地址</p>
 					</div>
-					<ul class="tianxie-list">
+					<ul class="tianxie-list tianxie-list-height">
 						<li class="active">
-							<p class="tianxie-name">崔思淼</p>
+							<p class="tianxie-name active">崔思淼</p>
 							<p class="tianxie-addr">啊宁  天津  南开区  全境   晋宁南里10号楼3门302-天拖南景宁道北里西     135****3376</p>
 							<div class="tianxie-btn">
-								<p class="tianxie">设为默认地址</p>
-								<p class="tianxie">编辑</p>
-								<p class="tianxie">删除</p>
+								<p class="tianxie-item tianxie-default">设为默认地址</p>
+								<p class="tianxie-item tianxie-edit">编辑</p>
+								<p class="tianxie-item tianxie-del">删除</p>
 							</div>
 						</li>
 						<li>
 							<p class="tianxie-name">崔思淼</p>
 							<p class="tianxie-addr">啊宁  天津  南开区  全境   晋宁南里10号楼3门302-天拖南景宁道北里西     135****3376</p>
 							<div class="tianxie-btn">
-								<p class="tianxie">设为默认地址</p>
-								<p class="tianxie">编辑</p>
-								<p class="tianxie">删除</p>
+								<p class="tianxie-item tianxie-default">设为默认地址</p>
+								<p class="tianxie-item tianxie-edit">编辑</p>
+								<p class="tianxie-item tianxie-del">删除</p>
+							</div>
+						</li>
+						<li>
+							<p class="tianxie-name">崔思淼</p>
+							<p class="tianxie-addr">啊宁  天津  南开区  全境   晋宁南里10号楼3门302-天拖南景宁道北里西     135****3376</p>
+							<div class="tianxie-btn">
+								<p class="tianxie-item tianxie-default">设为默认地址</p>
+								<p class="tianxie-item tianxie-edit">编辑</p>
+								<p class="tianxie-item tianxie-del">删除</p>
+							</div>
+						</li>
+						<li>
+							<p class="tianxie-name">崔思淼</p>
+							<p class="tianxie-addr">啊宁  天津  南开区  全境   晋宁南里10号楼3门302-天拖南景宁道北里西     135****3376</p>
+							<div class="tianxie-btn">
+								<p class="tianxie-item tianxie-default">设为默认地址</p>
+								<p class="tianxie-item tianxie-edit">编辑</p>
+								<p class="tianxie-item tianxie-del">删除</p>
+							</div>
+						</li>
+						<li>
+							<p class="tianxie-name">崔思淼</p>
+							<p class="tianxie-addr">啊宁  天津  南开区  全境   晋宁南里10号楼3门302-天拖南景宁道北里西     135****3376</p>
+							<div class="tianxie-btn">
+								<p class="tianxie-item tianxie-default">设为默认地址</p>
+								<p class="tianxie-item tianxie-edit">编辑</p>
+								<p class="tianxie-item tianxie-del">删除</p>
+							</div>
+						</li>
+						<li>
+							<p class="tianxie-name">崔思淼</p>
+							<p class="tianxie-addr">啊宁  天津  南开区  全境   晋宁南里10号楼3门302-天拖南景宁道北里西     135****3376</p>
+							<div class="tianxie-btn">
+								<p class="tianxie-item tianxie-default">设为默认地址</p>
+								<p class="tianxie-item tianxie-edit">编辑</p>
+								<p class="tianxie-item tianxie-del">删除</p>
 							</div>
 						</li>
 					</ul>
-					<div class="folder"><img src="images/top.png">收起地址</div>
+					<div class="folder"><span>收起地址</span><img src="images/top.png"></div>
 				</div>
 			</div>
 			<div class="pay-box">
 				<p class="pay-tit">支付方式</p>
 				<div class="pay-wrap">
-					<p class="pay-item">货到付款</p>
-					<p class="pay-item">微信支付</p>
+					<p class="pay-item active">货到付款<input type="hidden" value="1" name=""></p>
+					<p class="pay-item">微信支付<input type="hidden" value="0" name=""></p>
 				</div>
 			</div>
 			<div class="se-bottle">
@@ -108,7 +152,33 @@
 	</div>
 	<script type="text/javascript">
 		$(function(){
-			
+			// 支付方式
+			$(".pay-item").click(function(){
+				$(this).addClass("active").siblings(".pay-item").removeClass("active");
+				$(".pay-item").find("input").val(0);
+				$(this).find("input").val(1);
+			})
+			// 收起地址
+			$(".folder").click(function(){
+				if($(".tianxie-list").hasClass("tianxie-list-height")){
+					$(".tianxie-list").removeClass("tianxie-list-height");
+					$(this).find("span").text("展开地址");
+				}else{
+					$(".tianxie-list").addClass("tianxie-list-height");
+					$(this).find("span").text("收起地址");
+				}
+			})			
+			// 设置默认地址
+			$(".tianxie-default").click(function(){
+				$(".tianxie-name").removeClass("active");
+				$(this).parents("li").find(".tianxie-name").addClass("active");
+				$(".tianxie-list li").removeClass("active");
+				$(this).parents("li").addClass("active");
+			})		
+			// 删除地址
+			$(".tianxie-del").click(function(){
+				$(this).parents("li").remove();
+			})
 		})
 		
 
