@@ -185,3 +185,7 @@ color: #c0c3c5;
 .clear{
 	clear: both;
 }
+
+::-webkit-scrollbar {
+    display: none;
+  }

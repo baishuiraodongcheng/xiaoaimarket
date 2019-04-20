@@ -128,7 +128,15 @@
 				<a href="#" title="晓爱商城"><div class="banner-div2">限时特惠</div></a>
 			</div>
 			<div class="banner-wrapper">
-				<img class="banner-bg" src="images/banner.png"/>
+				<div class="swiper-wrap">
+					<div class="swiper-containerc">
+					  <div class="swiper-wrapper">
+					    <div class="swiper-slide"><img src="images/banner.png"/></div>
+					    <div class="swiper-slide"><img src="images/banner.png"/></div>
+					    <div class="swiper-slide"><img src="images/banner.png"/></div>
+					  </div>
+					</div>
+				</div>
 				<div class="banner-content">
 					<div class="banner-right">
 						<div class="banner-right-one">
@@ -817,6 +825,17 @@
 	</div>
 <script type="text/javascript">
 	$(function(){
+		var mySwiperc = new Swiper('.swiper-containerc', {
+			autoplay: 5000,//可选选项，自动滑动
+		})
+		var w = $(window).width();
+		$(".swiper-containerc img").width(w);
+		$(window).resize(function () {  
+			var w = $(window).width();
+			$(".swiper-containerc img").width(w);
+		});
+
+
 		var mySwipera = new Swiper('.swiper-containera', {
 			autoplay: 5000,//可选选项，自动滑动
 			prevButton:'.swiper-button-prev',

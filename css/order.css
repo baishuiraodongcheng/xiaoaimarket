@@ -119,9 +119,9 @@ body {
 	margin:0 30px;
 }
 .order-list li{
-	margin-bottom: 1px solid #f2f2f2;
+	border-right: 1px solid #f2f2f2;
 	overflow: hidden;
-	margin-top:20px;
+	padding-top:20px;
 }
 .order-title{	
 	height: 40px;
@@ -140,6 +140,9 @@ body {
 .order-box{
 	overflow: hidden;
 	padding:20px 0;
+}
+.order-li{
+	float: left;
 }
 .order-box img{
 	width: 80px;
@@ -183,15 +186,15 @@ body {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	border-right:1px solid #f2f2f2;
+	/*border-right:1px solid #f2f2f2;*/
 }
 .order-money{
 	float: left;
 	width: 170px;
-	height: 60px;
+	height: 100%;
 	overflow: hidden;
 	padding-top:20px;
-	border-right:1px solid #f2f2f2;
+	/*border-right:1px solid #f2f2f2;*/
 }
 .order-qian{
 	height: 20px;
@@ -219,7 +222,7 @@ body {
 	height: 60px;
 	overflow: hidden;
 	padding-top:20px;
-	border-right:1px solid #f2f2f2;
+	/*border-right:1px solid #f2f2f2;*/
 }
 .order-info p{	
 	line-height: 20px;
