@@ -614,6 +614,10 @@
 			</div>
 		</div>
 		<div class="wrap-right">
+			<div class="icon-list client">
+				<img src="images/ear.png">
+				<p>客服</p>
+			</div>
 			<div class="icon-list">
 				<img src="images/cart.png">
 				<p>购物车</p>
@@ -825,6 +829,13 @@
 	</div>
 <script type="text/javascript">
 	$(function(){
+		$(".client").mouseenter(function(){
+			$(".refer-box").show();
+		})
+		$(".client").mouseout(function(){
+			$(".refer-box").hide();
+		})
+
 		var mySwiperc = new Swiper('.swiper-containerc', {
 			autoplay: 5000,//可选选项，自动滑动
 		})
