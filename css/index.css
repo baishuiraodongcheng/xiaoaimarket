@@ -412,6 +412,7 @@ body{
     padding: 30px 20px 40px;
     border-radius: 9px;
     z-index: 999;
+    display: none;
 }
 .online-refer{
 	height: 30px;
